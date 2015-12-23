@@ -1,10 +1,12 @@
-<% form_for(@list) do |f| %>
-
-
-  <div class="field">
-    <%= f.label("Name") %><br>
-    <div><%= f.text_field :name %>
-      <%= f.submit %>
+<div class="row">
+  <% form_for(@list) do |f| %>
+    <div class="field">
+      <%= f.label("Name") %><br>
+      <div><%= f.text_field :name %>
+        <div class="row">
+          <%= f.submit class: "btn" %>
+        </div>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

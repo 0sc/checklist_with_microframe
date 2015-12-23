@@ -1,6 +1,13 @@
-<h1>Editing Item</h1>
-
+<div class="row">
+  <h2 class="center"><%= @list.name %></h2>
+</div>
+<div>
+  <h4>Edit list item:</h4>
+</div>
 <%= render_partial 'form' %>
 
-<%= link_to 'Show', "/lists/#{@list.id}/items/#{@item.id}" %> |
-<%= link_to 'Back', "/lists/#{@list.id}/items" %>
+<div class="row">
+  <div class="col s6">
+    <%= link_to 'Back', "/lists/#{@list.id}/items" %>
+  </div>
+</div>

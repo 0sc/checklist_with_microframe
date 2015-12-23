@@ -1,12 +1,23 @@
-<p>
-  <strong>Name:</strong>
-  <%= @list.name %>
-  <ul>
-    <% @items.each do |item| %>
-      <li><%= item.description %> <span><%= link_to "more >>", "/lists/#{@list.id}/items/#{item.id}"%></span></li>
-    <% end %>
-  </ul>
-</p>
+<div class="row">
+  <h2 class="center"><%= @list.name %></h2>
+</div>
 
-<%= link_to 'Edit list', "/lists/#{@list.id}/edit" %> | <%= link_to 'Add item', "/lists/#{@list.id}/items/new" %> |
-<%= link_to 'Back', "/lists" %>
+<div class="row">
+  <div class="collection">
+    <% @items.each do |item| %>
+    <%= link_to "#{item.description} <span class='badge'><i class='material-icons right'>send</i></span>", "/lists/#{@list.id}/items/#{item.id}", class: "collection-item" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s4">
+    <%= link_to 'Edit list', "/lists/#{@list.id}/edit", class: "btn" %>
+  </div>
+  <div class="col s4">
+    <%= link_to 'Add item', "/lists/#{@list.id}/items/new", class: "btn" %>
+  </div>
+  <div class="col s4">
+    <%= link_to 'Back', "/lists", class: "btn" %>
+  </div>
+</div>

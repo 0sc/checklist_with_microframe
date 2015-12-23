@@ -1,6 +1,6 @@
-<h1>Listing Lists</h1>
+<h1 class="center">Microframe Checklist</h1>
 
-<table>
+<table class="striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -11,10 +11,9 @@
   <tbody>
     <% @lists.each do |list| %>
       <tr>
-        <td><%= list.name %></td>
-        <td><%= link_to 'Show', "/lists/#{list.id}" %></td>
-        <td><%= link_to 'Edit', "/lists/#{list.id}/edit" %></td>
-        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to list.name, "/lists/#{list.id}" %></td>
+        <td><%= link_to 'Edit', "/lists/#{list.id}/edit", class: "btn-flat grey lighten-2" %></td>
+        <td><%= link_to 'Destroy', list, method: :delete, class: 'btn waves-effect waves-light red' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +21,4 @@
 
 <br>
 
-<%= link_to 'New List', "/lists/new" %>
+<%= link_to 'New List ', "/lists/new", class: "btn" %>

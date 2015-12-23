@@ -7,7 +7,11 @@ class ListsController < Microframe::ApplicationController
 
   def show
     set_list
-    @items = @list.items.all
+    if @list
+      @items = @list.items.all
+    else
+      redirect_to "/lists"
+    end
   end
 
   def new
