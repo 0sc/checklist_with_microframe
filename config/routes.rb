@@ -1,6 +1,6 @@
 ChecklistApplication.routes.draw do
   get "/test", to: "lists#test"
-  get "/", to: "lists#index"
+  root "lists#index"
   resources :lists
 
   get "/lists/:list_id/items", to: "items#index"

@@ -2,6 +2,7 @@ class ListsController < Microframe::ApplicationController
 
   def index
     @lists = List.all
+    session["aos"] = "Elder brother of SOW"
     render view: "index"
   end
 

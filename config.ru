@@ -9,5 +9,6 @@ require File.join(APP_PATH, "config", "routes")
 
 use Rack::Static, :urls => ["/stylesheets", "/images", "/javascripts", "/font"], :root => File.join(APP_PATH, "app", "assets")
 use Rack::MethodOverride
+use Rack::Session::Cookie
 use Rack::Reloader
 run ChecklistApplication
