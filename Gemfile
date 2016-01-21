@@ -1,4 +1,4 @@
 source "https://rubygems.org"
 
-gem "microframe"
+gem "microframe"#, path: "../microframe"
 gem "pry-nav"

@@ -1,7 +1,7 @@
 module Microframe
   module ORM
     class Connection
-      @@dbname = "checklist"
+      @dbname = "checklist"
     end
   end
 end

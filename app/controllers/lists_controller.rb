@@ -25,12 +25,18 @@ class ListsController < Microframe::ApplicationController
 
   def create
     @list = List.create(list_params)
-    redirect_to "/lists/#{@list.id}"
+    if @list.id
+      redirect_to "/lists/#{@list.id}"
+    else
+      render view: "new"
+    end
   end
 
   def update
     set_list
     @list.update(list_params)
+
+    binding.pry
     redirect_to "/lists/#{@list.id}"
   end
 

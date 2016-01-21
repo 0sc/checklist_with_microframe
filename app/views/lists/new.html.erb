@@ -1,3 +1,6 @@
 <h2 class="center">New List</h2>
+<% @list.errors.each do |err| %>
+  <p><%= err %></p>
+<% end %>
 <%= render_partial 'form' %>
 <%= link_to 'Back', "/lists" %>

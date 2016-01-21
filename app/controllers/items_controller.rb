@@ -9,6 +9,7 @@ class ItemsController < Microframe::ApplicationController
 
   def new
     set_list
+    binding.pry
     @item = Item.new
   end
 
